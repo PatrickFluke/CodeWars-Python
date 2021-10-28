@@ -1,0 +1,20 @@
+def rot13(message):
+    str = ""
+    for l in message:
+        n = ord(l)
+        if n > ord("A") - 1 and n < ord("Z") + 1:
+            
+            if n + 13 > ord("Z"):
+                n = ord("A")-1 + 13 - (ord("Z") - n)
+            else:
+                n = n + 13
+        elif n > ord("a") - 1 and n < ord("z") + 1:
+            if n + 13 > ord("z"):
+                n = ord("a")-1 + 13 - (ord("z")  - n)
+            else:
+                 n = n + 13
+        str = str + chr(n)
+        print(l + " becomes " + chr(n))
+        
+    return str
+
