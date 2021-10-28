@@ -1,0 +1,20 @@
+def sqInRect(lng, wdth):
+    # your code
+    c = [];
+    if not lng == wdth:
+        while lng > 0 and wdth > 0:
+            lng, wdth, sqr = returnSquare(lng, wdth)
+            c.append(sqr)
+            print(c)
+        return c
+    else:
+        return None
+
+def returnSquare(lng, wdth):
+    if lng > wdth:
+        sqr = wdth
+        lng = lng - sqr
+    else:
+        sqr = lng
+        wdth = wdth - sqr
+    return lng, wdth, sqr
